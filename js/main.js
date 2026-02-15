@@ -1,8 +1,91 @@
-// Ambassador Bilingual Academy - Main JS
+// Ambassador Bilingual Academy - Enhanced Language Switching
+
+// ============================================
+// LANGUAGE MANAGEMENT
+// ============================================
+let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+
+function setLanguage(lang) {
+    // Check if language is available in translations
+    if (!translations[lang]) {
+        console.warn(`Language '${lang}' not available. Available languages: ${Object.keys(translations).join(', ')}`);
+        return;
+    }
+
+    currentLanguage = lang;
+    localStorage.setItem('selectedLanguage', lang);
+
+    // Add transition class
+    document.body.classList.add('language-transitioning');
+
+    updatePageLanguage();
+    updateLanguageButtons();
+
+    // Remove transition class after animation
+    setTimeout(() => {
+        document.body.classList.remove('language-transitioning');
+    }, 300);
+}
+
+function updatePageLanguage() {
+    const t = translations[currentLanguage];
+
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let text = t;
+
+        // Navigate through nested object
+        for (let k of keys) {
+            text = text[k];
+        }
+
+        // Update element based on type
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = text;
+        } else {
+            // Preserve line breaks for multi-line text
+            if (text && text.includes('\n')) {
+                el.innerHTML = text.replace(/\n/g, '<br>');
+            } else {
+                el.textContent = text;
+            }
+        }
+    });
+
+    // Update HTML lang attribute
+    document.documentElement.lang = currentLanguage;
+}
+
+function updateLanguageButtons() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === currentLanguage) {
+            btn.classList.add('active');
+        }
+    });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Vanta.js Clouds
+    // ============================================
+    // LANGUAGE SETUP
+    // ============================================
+    updatePageLanguage();
+    updateLanguageButtons();
+
+    // Add click handlers to all language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
+
+    // ============================================
+    // VANTA.JS CLOUDS BACKGROUND
+    // ============================================
     if (typeof VANTA !== 'undefined' && VANTA.CLOUDS) {
         try {
             VANTA.CLOUDS({
@@ -22,133 +105,175 @@ document.addEventListener("DOMContentLoaded", () => {
                 speed: 1.2
             });
         } catch (e) {
-            console.log('Vanta error:', e);
+            console.log('Vanta.js error:', e);
         }
     }
 
-    // Language Toggle
-    let lang = 'en';
-    const langOpts = document.querySelectorAll('.lang-opt');
+    // ============================================
+    // MOBILE MENU TOGGLE
+    // ============================================
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    function switchLang(newLang) {
-        lang = newLang;
-
-        document.querySelectorAll('[data-en][data-th]').forEach(el => {
-            const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-th');
-            if (text) el.textContent = text;
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        langOpts.forEach(opt => {
-            opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
-
-        try {
-            localStorage.setItem('lang', lang);
-        } catch (e) { }
     }
 
-    langOpts.forEach(opt => {
-        opt.addEventListener('click', () => {
-            switchLang(opt.getAttribute('data-lang'));
+    // ============================================
+    // SMOOTH SCROLL REVEAL ANIMATIONS
+    // ============================================
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
         });
+    }, observerOptions);
+
+    // Observe all scroll-reveal elements
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
     });
 
-    try {
-        const saved = localStorage.getItem('lang');
-        if (saved) switchLang(saved);
-    } catch (e) { }
-
-    // Nav Active State
-    const navItems = document.querySelectorAll('.nav-item');
-    const sections = document.querySelectorAll('section[id]');
-
-    function updateNav() {
-        let current = '';
-        sections.forEach(sec => {
-            const top = sec.offsetTop;
-            if (scrollY >= (top - 200)) {
-                current = sec.getAttribute('id');
-            }
-        });
-
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href').substring(1) === current) {
-                item.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', updateNav);
-
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', (e) => {
+    // ============================================
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(a.getAttribute('href'));
+            const target = document.querySelector(this.getAttribute('href'));
             if (target) {
+                const offset = 80;
+                const targetPosition = target.offsetTop - offset;
                 window.scrollTo({
-                    top: target.offsetTop - 80,
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }
         });
     });
 
-    // GSAP Animations
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
+    // ============================================
+    // NAVBAR SCROLL EFFECT
+    // ============================================
+    let lastScroll = 0;
+    const nav = document.querySelector('nav');
 
-        gsap.utils.toArray('.v-box').forEach(box => {
-            gsap.from(box, {
-                scrollTrigger: {
-                    trigger: box,
-                    start: 'top 80%'
-                },
-                y: 80,
-                opacity: 0,
-                duration: 1,
-                ease: 'power3.out'
-            });
-        });
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
 
-        gsap.utils.toArray('.lead-card').forEach(card => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 80%'
-                },
-                y: 80,
-                opacity: 0,
-                scale: 0.9,
-                duration: 1,
-                ease: 'power3.out'
-            });
-        });
+        if (currentScroll > 100) {
+            nav.classList.add('shadow-lg');
+        } else {
+            nav.classList.remove('shadow-lg');
+        }
 
-        gsap.utils.toArray('.proj-box').forEach(box => {
-            gsap.from(box, {
-                scrollTrigger: {
-                    trigger: box,
-                    start: 'top 80%'
-                },
-                y: 80,
-                opacity: 0,
-                duration: 1,
-                ease: 'power3.out'
-            });
-        });
-    }
+        lastScroll = currentScroll;
+    });
 
-    // Form Submit
-    const form = document.querySelector('.form');
+    // ============================================
+    // FORM SUBMISSION
+    // ============================================
+    const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you! We will contact you soon.');
-            form.reset();
+
+            // Get button text based on current language
+            const successText = currentLanguage === 'en' ? '✓ Message Sent!' : '✓ ส่งข้อความแล้ว!';
+            const originalText = currentLanguage === 'en' ? 'Send Message' : 'ส่งข้อความ';
+
+            // Show success message
+            const btn = form.querySelector('button[type="submit"]');
+            const btnOriginalText = btn.textContent;
+            btn.textContent = successText;
+            btn.classList.add('bg-green-600');
+
+            // Reset after 3 seconds
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('bg-green-600');
+                form.reset();
+                updatePageLanguage(); // Refresh placeholders
+            }, 3000);
         });
     }
 
+    // ============================================
+    // ADD STAGGER ANIMATION TO CARDS
+    // ============================================
+    const addStaggerAnimation = () => {
+        const cardGroups = [
+            document.querySelectorAll('#intro .scroll-reveal'),
+            document.querySelectorAll('#contact .scroll-reveal')
+        ];
+
+        cardGroups.forEach(group => {
+            group.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 100}ms`;
+            });
+        });
+    };
+
+    addStaggerAnimation();
+
+    // ============================================
+    // KEYBOARD SHORTCUTS
+    // ============================================
+    document.addEventListener('keydown', (e) => {
+        // Alt + E for English
+        if (e.altKey && e.key === 'e') {
+            e.preventDefault();
+            setLanguage('en');
+        }
+        // Alt + T for Thai
+        if (e.altKey && e.key === 't') {
+            e.preventDefault();
+            setLanguage('th');
+        }
+    });
+
+    // ============================================
+    // ACCESSIBILITY IMPROVEMENTS
+    // ============================================
+    // Add aria-label to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        const lang = btn.getAttribute('data-lang');
+        const label = lang === 'en' ? 'Switch to English' : 'สลับเป็นภาษาไทย';
+        btn.setAttribute('aria-label', label);
+    });
+
+    // ============================================
+    // CONSOLE GREETING
+    // ============================================
     console.log('%c🎓 Ambassador Bilingual Academy', 'color: #2563eb; font-size: 20px; font-weight: bold;');
+    console.log('%c✓ Enhanced Language Switching Loaded', 'color: #10b981; font-size: 14px;');
+    console.log('%c💡 Tip: Press Alt+E for English, Alt+T for Thai', 'color: #6366f1; font-size: 12px;');
+});
+
+// ============================================
+// PARALLAX EFFECT ON SCROLL (SUBTLE)
+// ============================================
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.animate-float');
+
+    parallaxElements.forEach(el => {
+        const speed = 0.3;
+        el.style.transform = `translateY(${scrolled * speed}px)`;
+    });
 });
