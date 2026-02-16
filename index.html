@@ -164,11 +164,10 @@
                     alt="Logo" class="w-32 h-32 mx-auto drop-shadow-2xl">
             </div>
 
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-serif font-black mb-6">
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-sans font-black mb-6">
                 <span class="bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-transparent">AMBASSADOR</span>
                 <br>
-                <span class="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">BILINGUAL
-                    ACADEMY</span>
+                <span class="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">BILINGUAL  ACADEMY</span>
             </h1>
 
             <p class="text-xl sm:text-2xl text-gray-700 mb-10" data-i18n="hero.motto">
@@ -553,42 +552,59 @@
         
                 </div>
         
-                <!-- Work Gallery -->
-                <div class="scroll-reveal">
-                    <h3 class="text-3xl font-serif font-bold text-center text-gray-900 mb-10"
-                        data-i18n="responsibilities.galleryTitle">
+                <!-- Work Gallery Auto Scroll -->
+                <div class="scroll-reveal overflow-hidden py-10">
+                    <h3 class="text-3xl font-sans font-bold text-center text-gray-900 mb-10">
                         Work Gallery
                     </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div class="group cursor-pointer overflow-hidden rounded-xl" onclick="openGallery(0)">
-                            <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Activity+1" alt="Activity 1"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="group cursor-pointer overflow-hidden rounded-xl" onclick="openGallery(1)">
-                            <img src="https://via.placeholder.com/400x300/2563eb/ffffff?text=Activity+2" alt="Activity 2"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="group cursor-pointer overflow-hidden rounded-xl" onclick="openGallery(2)">
-                            <img src="https://via.placeholder.com/400x300/7c3aed/ffffff?text=Activity+3" alt="Activity 3"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="group cursor-pointer overflow-hidden rounded-xl" onclick="openGallery(3)">
-                            <img src="https://via.placeholder.com/400x300/10b981/ffffff?text=Activity+4" alt="Activity 4"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="group cursor-pointer overflow-hidden rounded-xl" onclick="openGallery(4)">
-                            <img src="https://via.placeholder.com/400x300/f59e0b/ffffff?text=Activity+5" alt="Activity 5"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="group cursor-pointer overflow-hidden rounded-xl" onclick="openGallery(5)">
-                            <img src="https://via.placeholder.com/400x300/ef4444/ffffff?text=Activity+6" alt="Activity 6"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                
+                    <div class="relative w-full overflow-hidden">
+                        <div class="gallery-track flex gap-6">
+                
+                            <!-- รูปชุดที่ 1 -->
+                            <img src="/assets/images/Work Gallery/Activity1.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity2.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity3.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity4.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity5.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity6.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity7.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity8.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity9.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity10.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity11.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity12.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity13.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity14.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity15.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity16.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity17.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity18.jpg" class="gallery-img">
+                
+                            <!-- 👇 สำคัญมาก duplicate เพื่อให้ loop smooth -->
+                            <img src="/assets/images/Work Gallery/Activity1.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity2.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity3.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity4.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity5.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity6.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity7.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity8.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity9.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity10.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity11.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity12.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity13.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity14.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity15.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity16.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity17.jpg" class="gallery-img">
+                            <img src="/assets/images/Work Gallery/Activity18.jpg" class="gallery-img">
+                
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
+
         <!-- Gallery Modal -->
         <div id="galleryModal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center">
             <button onclick="closeGallery()"

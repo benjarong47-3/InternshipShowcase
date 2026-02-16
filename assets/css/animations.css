@@ -765,3 +765,30 @@ img[loading="lazy"].loaded {
         transform: translateY(-4px);
     }
 }
+
+.gallery-track {
+    width: max-content;
+    animation: scrollGallery 40s linear infinite;
+}
+
+.gallery-img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.08);
+}
+
+@keyframes scrollGallery {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
