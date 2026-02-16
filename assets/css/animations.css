@@ -1,0 +1,767 @@
+/* ============================================
+   AMBASSADOR BILINGUAL ACADEMY
+   Complete Styles & Animations
+   Version 2.0 - All Bugs Fixed
+   ============================================ */
+
+/* ============================================
+   TAILWIND BASE
+   ============================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   FONT CONFIGURATION
+   ============================================ */
+body {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ============================================
+   NAVIGATION COMPONENTS
+   ============================================ */
+
+/* Desktop Navigation Links */
+.nav-link {
+    @apply text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium relative;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-link {
+    @apply block text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium rounded-lg;
+}
+
+/* ============================================
+   BUTTON COMPONENTS
+   ============================================ */
+
+/* Primary Button */
+.btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    @apply shadow-2xl;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Outline Button */
+.btn-outline {
+    @apply px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-full font-semibold;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    @apply bg-blue-600 text-white;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   BADGES & LABELS
+   ============================================ */
+
+/* Section Label Badge */
+.label-badge {
+    @apply inline-block px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider mb-4;
+}
+
+/* Role Badge */
+.role-badge {
+    @apply inline-block px-4 py-1 text-white text-xs font-semibold rounded-full uppercase mb-3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Technology Badge */
+.tech-badge {
+    @apply px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold;
+    transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+    @apply bg-blue-200 transform scale-105;
+}
+
+/* Light Technology Badge (for dark backgrounds) */
+.tech-badge-light {
+    @apply px-3 py-1 bg-white/20 rounded-full text-sm font-semibold;
+    backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+/* Section Title */
+.section-title {
+    @apply text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4;
+}
+
+/* Section Subtitle */
+.section-subtitle {
+    @apply text-xl text-gray-600 max-w-2xl mx-auto;
+}
+
+/* ============================================
+   CARD COMPONENTS
+   ============================================ */
+
+/* Person Card */
+.person-card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-xl w-full max-w-[350px];
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.person-card:hover {
+    @apply shadow-2xl;
+    transform: translateY(-8px);
+}
+
+/* Person Image Container */
+.person-image {
+    @apply w-full aspect-[3/4] overflow-hidden bg-gradient-to-br from-indigo-100 to-purple-100;
+    position: relative;
+}
+
+.person-image img {
+    @apply w-full h-full object-cover;
+    transition: transform 0.4s ease;
+}
+
+.person-card:hover .person-image img {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   PROJECT CARDS
+   ============================================ */
+
+/* Standard Project Card */
+.project-card {
+    @apply bg-white border-2 border-gray-200 rounded-2xl p-8 cursor-pointer relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    @apply shadow-2xl border-blue-500;
+    transform: translateY(-8px);
+}
+
+/* Highlighted Project Card */
+.project-card-highlight {
+    @apply bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 cursor-pointer relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card-highlight:hover {
+    @apply shadow-2xl;
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Project Number Watermark */
+.project-number {
+    @apply text-6xl font-black absolute top-4 right-4;
+    opacity: 0.1;
+}
+
+/* Project Icon */
+.project-icon {
+    @apply w-16 h-16 rounded-xl flex items-center justify-center mb-6;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
+}
+
+/* ============================================
+   MEDIA COMPONENTS
+   ============================================ */
+
+/* Video Container (16:9 Aspect Ratio) */
+.video-container {
+    @apply relative rounded-2xl overflow-hidden shadow-2xl;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-container iframe {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* ============================================
+   SPECIAL SECTIONS
+   ============================================ */
+
+/* Philosophy Box */
+.philosophy-box {
+    @apply bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border-l-4 border-blue-600;
+    backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   GALLERY
+   ============================================ */
+
+/* Gallery Item */
+.gallery-item {
+    @apply group cursor-pointer overflow-hidden rounded-xl aspect-[4/3];
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    @apply shadow-xl;
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    @apply w-full h-full object-cover;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   CONTACT COMPONENTS
+   ============================================ */
+
+/* Contact Icon */
+.contact-icon {
+    @apply w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0;
+    backdrop-filter: blur(10px);
+}
+
+/* Contact Form Container */
+.contact-form-box {
+    @apply bg-white/10 backdrop-blur-lg rounded-2xl p-8;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Contact Input */
+.contact-input {
+    @apply w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+    @apply outline-none border-blue-400;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   MODAL COMPONENTS
+   ============================================ */
+
+/* Base Modal */
+.modal {
+    @apply fixed inset-0 bg-black/90 z-50 hidden items-center justify-center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    @apply flex;
+    opacity: 1;
+}
+
+/* Modal Close Button */
+.modal-close {
+    @apply absolute top-8 right-8 text-white text-4xl cursor-pointer z-10;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    @apply text-gray-300;
+    transform: rotate(90deg);
+}
+
+/* Inline Modal Close (for light backgrounds) */
+.modal-close-inline {
+    @apply absolute top-6 right-6 text-gray-400 hover:text-gray-600 text-3xl cursor-pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close-inline:hover {
+    transform: rotate(90deg);
+}
+
+/* Modal Navigation Buttons */
+.modal-prev,
+.modal-next {
+    @apply absolute top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white px-6 py-4 rounded-lg text-2xl cursor-pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.modal-prev {
+    @apply left-8;
+}
+
+.modal-next {
+    @apply right-8;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Modal Content Box */
+.modal-content-box {
+    @apply bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative p-8;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-content-box.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Custom Scrollbar for Modal */
+.modal-content-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content-box::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+}
+
+.modal-content-box::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 rounded-full;
+}
+
+.modal-content-box::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-600;
+}
+
+/* ============================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================ */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+/* Float Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float,
+.logo-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Slide In From Left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.animate-pulse-custom {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   ANIMATION DELAYS
+   ============================================ */
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-600 {
+    animation-delay: 600ms;
+}
+
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+.delay-800 {
+    animation-delay: 800ms;
+}
+
+/* ============================================
+   LANGUAGE TOGGLE BUTTON
+   ============================================ */
+
+.lang-btn {
+    @apply px-3 py-1.5 text-sm font-semibold rounded-full;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: inherit;
+}
+
+.lang-btn.active {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+    @apply bg-gray-200;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Gradient Text */
+.gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+/* Backdrop Blur */
+.backdrop-blur-custom {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Glass Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+/* Loading Spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 0.8s linear infinite;
+}
+
+/* Skeleton Loading */
+@keyframes skeleton {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.skeleton {
+    @apply bg-gray-200 rounded;
+    animation: skeleton 1.5s ease-in-out infinite;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .section-title {
+        @apply text-3xl sm:text-4xl;
+    }
+
+    .person-card {
+        @apply max-w-full;
+    }
+
+    .project-card,
+    .project-card-highlight {
+        @apply p-6;
+    }
+
+    .modal-prev,
+    .modal-next {
+        @apply px-4 py-3 text-xl;
+    }
+
+    .modal-prev {
+        @apply left-4;
+    }
+
+    .modal-next {
+        @apply right-4;
+    }
+
+    .modal-content-box {
+        @apply p-6 mx-4;
+    }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .person-card {
+        max-width: 300px;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Focus Visible */
+*:focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-500;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        @apply text-black bg-white;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Optional - for future)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles here if needed in the future */
+}
+
+/* ============================================
+   CUSTOM UTILITIES
+   ============================================ */
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Smooth gradient overlay */
+.gradient-overlay {
+    position: relative;
+}
+
+.gradient-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+}
+
+/* ============================================
+   IMAGE OPTIMIZATION
+   ============================================ */
+
+img {
+    @apply max-w-full h-auto;
+}
+
+img[loading="lazy"] {
+    @apply opacity-0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    @apply opacity-100;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* GPU Acceleration */
+.gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Optimize animations */
+@media (hover: hover) {
+    .hover-lift:hover {
+        transform: translateY(-4px);
+    }
+}

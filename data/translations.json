@@ -1,0 +1,338 @@
+{
+    "nav": {
+        "home": {
+            "en": "Home",
+            "th": "หน้าแรก"
+        },
+        "introduction": {
+            "en": "Introduction",
+            "th": "แนะนำ"
+        },
+        "governance": {
+            "en": "Governance",
+            "th": "คณะกรรมการ"
+        },
+        "team": {
+            "en": "Team",
+            "th": "ทีมงาน"
+        },
+        "projects": {
+            "en": "Projects",
+            "th": "โครงการ"
+        },
+        "contact": {
+            "en": "Contact",
+            "th": "ติดต่อ"
+        }
+    },
+    "hero": {
+        "motto": {
+            "en": "Excellence in Language • Development of Life Skills",
+            "th": "ดีเลิศด้านภาษา • พัฒนาทักษะชีวิต"
+        },
+        "exploreBtn": {
+            "en": "Explore Vision",
+            "th": "สำรวจวิสัยทัศน์"
+        },
+        "contactBtn": {
+            "en": "Contact Us",
+            "th": "ติดต่อเรา"
+        }
+    },
+    "intro": {
+        "label": {
+            "en": "Introduction",
+            "th": "แนะนำโรงเรียน"
+        },
+        "title": {
+            "en": "Welcome to Ambassador Bilingual Academy",
+            "th": "ยินดีต้อนรับสู่โรงเรียนยุวทูตศึกษาราชพฤกษ์"
+        },
+        "visionTitle": {
+            "en": "Our Vision",
+            "th": "วิสัยทัศน์"
+        },
+        "vision1": {
+            "en": "We aspire to be a leading educational institution that instills a love for learning, fosters critical thinking, and cultivates global citizens who contribute positively to society.",
+            "th": "โรงเรียน Ambassador Bilingual Academy มุ่งมั่นที่จะเป็นสถาบันการศึกษาชั้นนำที่ปลูกฝังความรักในการเรียนรู้ ส่งเสริมการคิดอย่างมีวิจารณญาณ และพัฒนาผู้เรียนให้เป็นพลเมืองโลกที่มีคุณภาพ สามารถมีส่วนร่วมและสร้างประโยชน์แก่สังคมได้อย่างเหมาะสม"
+        },
+        "vision2": {
+            "en": "During 2024-2026, we aim to become a learning organization promoting participatory management and developing high-quality educators while ensuring educational excellence.",
+            "th": "ภายในปีการศึกษา 2567-2569 โรงเรียนยุวฑูตศึกษาพัฒนาราชพฤกษ์มุ่งสู่การเป็นองค์กรแห่งการเรียนรู้ บริหารจัดการโดยยึดหลักการมีส่วนร่วม มุ่งพัฒนาครูและบุคลากรให้มีคุณภาพ เพื่อยกระดับและประกันคุณภาพการศึกษา"
+        },
+        "vision3": {
+            "en": "We develop students to possess strong knowledge and effective communication skills in both Thai and English. Students will be equipped with essential life skills, morality, and ethics, enabling them to be good members of society.",
+            "th": "โรงเรียนมุ่งพัฒนาผู้เรียนให้มีความรู้ ความสามารถในการใช้ภาษาไทยและภาษาอังกฤษเพื่อการสื่อสารได้อย่างมีประสิทธิภาพ มีทักษะชีวิต เป็นผู้มีคุณธรรม จริยธรรม มีความสามารถในการคิด วิเคราะห์ และใช้เทคโนโลยีได้อย่างเหมาะสม มีสุขภาวะที่สมบูรณ์ และสามารถดำรงชีวิตอยู่ในสังคมได้อย่างมีความสุข"
+        },
+        "philosophyTitle": {
+            "en": "Our Philosophy",
+            "th": "ปรัชญาโรงเรียน"
+        },
+        "philosophy": {
+            "en": "Excellence in Language, Development of Life Skills",
+            "th": "ดีเลิศด้านภาษา พัฒนาทักษะชีวิต"
+        }
+    },
+    "governance": {
+        "label": {
+            "en": "School Governance",
+            "th": "คณะกรรมการบริหาร"
+        },
+        "title": {
+            "en": "School Governing Board",
+            "th": "คณะกรรมการบริหารโรงเรียน"
+        },
+        "foundersTitle": {
+            "en": "Founders",
+            "th": "ผู้ก่อตั้งโรงเรียน"
+        },
+        "executivesTitle": {
+            "en": "School Executives",
+            "th": "ผู้บริหารโรงเรียน"
+        },
+        "founder": {
+            "en": "Founder",
+            "th": "ผู้ก่อตั้ง"
+        },
+        "director": {
+            "en": "School Director",
+            "th": "ผู้อำนวยการโรงเรียน"
+        },
+        "manager": {
+            "en": "School Manager",
+            "th": "ผู้จัดการโรงเรียน"
+        },
+        "names": {
+            "amporn": {
+                "en": "",
+                "th": "อัมพร กมลโกมุท"
+            },
+            "chugait": {
+                "en": "",
+                "th": "ชูเกียรติ กมลโกมุท"
+            },
+            "somchai": {
+                "en": "",
+                "th": "สมชาย ธำรงไทยสกุล"
+            },
+            "pornthep": {
+                "en": "",
+                "th": "พรเทพ พิสุทธิ์วาณิชย์"
+            }
+        }
+    },
+    "team": {
+        "label": {
+            "en": "Our Team",
+            "th": "ทีมงานของเรา"
+        },
+        "title": {
+            "en": "IT Department & Interns",
+            "th": "ฝ่าย IT และนักศึกษาฝึกงาน"
+        },
+        "itHeadTitle": {
+            "en": "IT Department Head",
+            "th": "หัวหน้าฝ่าย IT"
+        },
+        "internsTitle": {
+            "en": "IT Interns",
+            "th": "นักศึกษาฝึกงาน IT"
+        },
+        "university": {
+            "en": "Computer Engineering, Rajamangala University of Technology Lanna",
+            "th": "วิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา"
+        },
+        "intern": {
+            "en": "IT Intern",
+            "th": "นักศึกษาฝึกงาน IT"
+        },
+        "names": {
+            "chananthida": {
+                "en": "",
+                "th": "ชนัญธิดา ผานดอยแดน"
+            },
+            "student1": {
+                "en": "Student Name 1",
+                "th": "ชื่อนักศึกษา 1"
+            },
+            "student2": {
+                "en": "Student Name 2",
+                "th": "ชื่อนักศึกษา 2"
+            }
+        },
+        "roles": {
+            "webdev": {
+                "en": "Web Developer & UI/UX",
+                "th": "นักพัฒนาเว็บและออกแบบ UI/UX"
+            },
+            "sysadmin": {
+                "en": "System Admin & Network",
+                "th": "ผู้ดูแลระบบและเครือข่าย"
+            }
+        }
+    },
+    "responsibilities": {
+        "label": {
+            "en": "Daily Work",
+            "th": "งานประจำวัน"
+        },
+        "title": {
+            "en": "Daily Responsibilities",
+            "th": "หน้าที่ความรับผิดชอบประจำวัน"
+        },
+        "galleryTitle": {
+            "en": "Work Gallery",
+            "th": "ภาพกิจกรรมการทำงาน"
+        },
+        "items": {
+            "google": {
+                "en": "Google Workspace Management",
+                "th": "จัดการ Google Workspace"
+            },
+            "googleDesc": {
+                "en": "Managed employee information using Google Workspace (Admin Console): create, update, delete user accounts, and control local group access.",
+                "th": "จัดการระบบข้อมูลพนักงานโดยใช้ Google Workspace (Admin Console) เช่น การสร้าง แก้ไข และลบบัญชีผู้ใช้งาน รวมถึงการควบคุมสิทธิ์การเข้าถึงในระบบ"
+            },
+            "maintenance": {
+                "en": "IT Maintenance & Support",
+                "th": "ซ่อมบำรุงและสนับสนุน IT"
+            },
+            "maintenanceDesc": {
+                "en": "Maintained, repaired, and installed computer equipment, hardware, software, and network systems (on-site and remote user support).",
+                "th": "ดูแล บำรุงรักษา ซ่อมแซม และติดตั้งอุปกรณ์คอมพิวเตอร์ ทั้งด้านฮาร์ดแวร์ ซอฟต์แวร์ และระบบเครือข่าย รวมถึงการให้บริการช่วยเหลือผู้ใช้งานทั้งแบบหน้างานและระยะไกล"
+            },
+            "cctv": {
+                "en": "CCTV System Management",
+                "th": "จัดการระบบกล้องวงจรปิด"
+            },
+            "cctvDesc": {
+                "en": "Managed CCTV systems, including accessing live feeds, adjusting settings, and reviewing historical recordings.",
+                "th": "ดูแลและจัดการระบบกล้องวงจรปิด (CCTV) เช่น การเข้าดูภาพสด การปรับตั้งค่าระบบ และการตรวจสอบข้อมูลย้อนหลัง"
+            },
+            "support": {
+                "en": "Technical Support",
+                "th": "สนับสนุนทางเทคนิค"
+            },
+            "supportDesc": {
+                "en": "Provided IT support and troubleshooting for staff and teachers.",
+                "th": "ให้การสนับสนุนด้านเทคโนโลยีสารสนเทศแก่บุคลากรและครูภายในองค์กร รวมถึงการแก้ไขปัญหาการใช้งานระบบต่าง ๆ"
+            },
+            "documentation": {
+                "en": "Event Documentation",
+                "th": "บันทึกกิจกรรม"
+            },
+            "documentationDesc": {
+                "en": "Took photos and videos for various school activities.",
+                "th": "ถ่ายภาพและวิดีโอกิจกรรมต่าง ๆ ของโรงเรียน"
+            },
+            "preparation": {
+                "en": "Event Preparation",
+                "th": "เตรียมงานกิจกรรม"
+            },
+            "preparationDesc": {
+                "en": "Prepared IT systems and equipment to support school events and ensure smooth operations.",
+                "th": "เตรียมความพร้อมด้านอุปกรณ์และระบบเทคโนโลยีสารสนเทศสำหรับการจัดกิจกรรมต่าง ๆ เพื่อให้การดำเนินงานเป็นไปอย่างราบรื่น"
+            }
+        }
+    },
+    "projects": {
+        "label": {
+            "en": "Internship Projects",
+            "th": "โครงการฝึกงาน"
+        },
+        "title": {
+            "en": "Innovation in Action",
+            "th": "นวัตกรรมในการปฏิบัติงาน"
+        },
+        "clickToView": {
+            "en": "Click to view details",
+            "th": "คลิกเพื่อดูรายละเอียด"
+        },
+        "project1": {
+            "title": {
+                "en": "Facility Management System",
+                "th": "ระบบจัดการสิ่งอำนวยความสะดวก"
+            },
+            "shortDesc": {
+                "en": "Web-based facility booking and resource management",
+                "th": "ระบบจองสิ่งอำนวยความสะดวกและจัดการทรัพยากรผ่านเว็บ"
+            }
+        },
+        "project2": {
+            "title": {
+                "en": "HR × IT Integration",
+                "th": "ระบบเชื่อมโยง HR × IT"
+            },
+            "shortDesc": {
+                "en": "Integrated system connecting HR and IT departments",
+                "th": "ระบบบูรณาการเชื่อมโยงระหว่างฝ่าย HR และ IT"
+            }
+        },
+        "project3": {
+            "title": {
+                "en": "IT Department Contact Portal",
+                "th": "ช่องทางติดต่อฝ่าย IT"
+            },
+            "shortDesc": {
+                "en": "Centralized IT support and communication portal",
+                "th": "พอร์ทัลรวมศูนย์สำหรับติดต่อและขอความช่วยเหลือจากฝ่าย IT"
+            }
+        },
+        "techStack": {
+            "en": "Technologies Used",
+            "th": "เทคโนโลยีที่ใช้"
+        }
+    },
+    "footer": {
+        "motto": {
+            "en": "Excellence in Language, Development of Life Skills",
+            "th": "ดีเลิศด้านภาษา พัฒนาทักษะชีวิต"
+        },
+        "addressTitle": {
+            "en": "Address",
+            "th": "ที่อยู่"
+        },
+        "schoolName": {
+            "en": "Ambassador Bilingual Academy",
+            "th": "โรงเรียนยุวทูตศึกษาราชพฤกษ์"
+        },
+        "addressLine1": {
+            "en": "133, Behind Goodview Village",
+            "th": "เลขที่ 133 หลังหมู่บ้านกู๊ดวิว"
+        },
+        "addressLine2": {
+            "en": "Mae Hia Sub-district, Mueang Chiang Mai District",
+            "th": "ตำบลแม่เหียะ อำเภอเมืองเชียงใหม่"
+        },
+        "addressLine3": {
+            "en": "Chiang Mai 50100, Thailand",
+            "th": "จังหวัดเชียงใหม่ 50100"
+        },
+        "quickLinksTitle": {
+            "en": "Quick Links",
+            "th": "ลิงก์ด่วน"
+        },
+        "backToTop": {
+            "en": "Back to Top",
+            "th": "กลับขึ้นด้านบน"
+        },
+        "copyright": {
+            "en": "© 2024 Ambassador Bilingual Academy. All rights reserved.",
+            "th": "© 2024 โรงเรียนแอมบาสเดอร์ บายลิงกัวล์ อคาเดมี สงวนลิขสิทธิ์"
+        }
+    },
+    "modal": {
+        "close": {
+            "en": "Close",
+            "th": "ปิด"
+        },
+        "keyFeatures": {
+            "en": "Key Features",
+            "th": "คุณสมบัติหลัก"
+        },
+        "technologies": {
+            "en": "Technologies",
+            "th": "เทคโนโลยีที่ใช้"
+        }
+    }
+}
