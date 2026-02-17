@@ -46,7 +46,7 @@
         },
         "title": {
             "en": "Welcome to Ambassador Bilingual Academy",
-            "th": "ยินดีต้อนรับสู่โรงเรียนยุวทูตศึกษาราชพฤกษ์"
+            "th": "ยินดีต้อนรับสู่โรงเรียนยุวทูตศึกษาพัฒนาราชพฤกษ์"
         },
         "visionTitle": {
             "en": "Our Vision",
@@ -134,40 +134,34 @@
             "en": "IT Department Head",
             "th": "หัวหน้าฝ่าย IT"
         },
+        "itHeadRole": {
+            "en": "IT Department Head",
+            "th": "หัวหน้าฝ่าย IT"
+        },
         "internsTitle": {
             "en": "IT Interns",
+            "th": "นักศึกษาฝึกงาน IT"
+        },
+        "internRole": {
+            "en": "IT Intern",
             "th": "นักศึกษาฝึกงาน IT"
         },
         "university": {
             "en": "Computer Engineering, Rajamangala University of Technology Lanna",
             "th": "วิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา"
         },
-        "intern": {
-            "en": "IT Intern",
-            "th": "นักศึกษาฝึกงาน IT"
-        },
         "names": {
             "chananthida": {
                 "en": "",
                 "th": "ชนัญธิดา ผานดอยแดน"
             },
-            "student1": {
-                "en": "Student Name 1",
-                "th": "ชื่อนักศึกษา 1"
+            "benjarong": {
+                "en": "",
+                "th": "เบญจรงค์ กันทาใจ"
             },
-            "student2": {
-                "en": "Student Name 2",
-                "th": "ชื่อนักศึกษา 2"
-            }
-        },
-        "roles": {
-            "webdev": {
-                "en": "Web Developer & UI/UX",
-                "th": "นักพัฒนาเว็บและออกแบบ UI/UX"
-            },
-            "sysadmin": {
-                "en": "System Admin & Network",
-                "th": "ผู้ดูแลระบบและเครือข่าย"
+            "nakorn": {
+                "en": "",
+                "th": "ณกร เขียวอินต๊ะ"
             }
         }
     },
@@ -183,6 +177,10 @@
         "galleryTitle": {
             "en": "Work Gallery",
             "th": "ภาพกิจกรรมการทำงาน"
+        },
+        "galleryDesc": {
+            "en": "Work atmosphere and activities during the internship at Ambassador Bilingual Academy",
+            "th": "ภาพบรรยากาศการทำงานและกิจกรรมต่างๆ ระหว่างการฝึกงาน ณ โรงเรียนยุวทูตศึกษาพัฒนาราชพฤกษ์"
         },
         "items": {
             "google": {
@@ -247,40 +245,6 @@
         "clickToView": {
             "en": "Click to view details",
             "th": "คลิกเพื่อดูรายละเอียด"
-        },
-        "project1": {
-            "title": {
-                "en": "Facility Management System",
-                "th": "ระบบจัดการสิ่งอำนวยความสะดวก"
-            },
-            "shortDesc": {
-                "en": "Web-based facility booking and resource management",
-                "th": "ระบบจองสิ่งอำนวยความสะดวกและจัดการทรัพยากรผ่านเว็บ"
-            }
-        },
-        "project2": {
-            "title": {
-                "en": "HR × IT Integration",
-                "th": "ระบบเชื่อมโยง HR × IT"
-            },
-            "shortDesc": {
-                "en": "Integrated system connecting HR and IT departments",
-                "th": "ระบบบูรณาการเชื่อมโยงระหว่างฝ่าย HR และ IT"
-            }
-        },
-        "project3": {
-            "title": {
-                "en": "IT Department Contact Portal",
-                "th": "ช่องทางติดต่อฝ่าย IT"
-            },
-            "shortDesc": {
-                "en": "Centralized IT support and communication portal",
-                "th": "พอร์ทัลรวมศูนย์สำหรับติดต่อและขอความช่วยเหลือจากฝ่าย IT"
-            }
-        },
-        "techStack": {
-            "en": "Technologies Used",
-            "th": "เทคโนโลยีที่ใช้"
         }
     },
     "footer": {
@@ -294,7 +258,7 @@
         },
         "schoolName": {
             "en": "Ambassador Bilingual Academy",
-            "th": "โรงเรียนยุวทูตศึกษาราชพฤกษ์"
+            "th": "โรงเรียนยุวทูตศึกษาพัฒนาราชพฤกษ์"
         },
         "addressLine1": {
             "en": "133, Behind Goodview Village",
@@ -312,27 +276,9 @@
             "en": "Quick Links",
             "th": "ลิงก์ด่วน"
         },
-        "backToTop": {
-            "en": "Back to Top",
-            "th": "กลับขึ้นด้านบน"
-        },
         "copyright": {
             "en": "© 2024 Ambassador Bilingual Academy. All rights reserved.",
-            "th": "© 2024 โรงเรียนแอมบาสเดอร์ บายลิงกัวล์ อคาเดมี สงวนลิขสิทธิ์"
-        }
-    },
-    "modal": {
-        "close": {
-            "en": "Close",
-            "th": "ปิด"
-        },
-        "keyFeatures": {
-            "en": "Key Features",
-            "th": "คุณสมบัติหลัก"
-        },
-        "technologies": {
-            "en": "Technologies",
-            "th": "เทคโนโลยีที่ใช้"
+            "th": "© 2567 โรงเรียนยุวทูตศึกษาพัฒนาราชพฤกษ์ สงวนลิขสิทธิ์"
         }
     }
 }
