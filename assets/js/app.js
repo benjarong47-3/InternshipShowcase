@@ -233,44 +233,111 @@ function initStaggerAnimations() {
 }
 
 // ============================================
-// PROJECT MODAL
+// PROJECT MODAL DATA (Updated)
 // ============================================
 const projectData = {
+    // =========================
+    // 01) Repair Request System
+    // =========================
     project1: {
-        title: { en: "Facility Management System", th: "ระบบจัดการสิ่งอำนวยความสะดวก" },
+        title: { en: "Repair Request System", th: "ระบบแจ้งซ่อมออนไลน์" },
         description: {
-            en: "A comprehensive web-based platform for managing school facilities, room bookings, and resource allocation.",
-            th: "แพลตฟอร์มเว็บสำหรับจัดการสิ่งอำนวยความสะดวกของโรงเรียน การจองห้อง และการจัดสรรทรัพยากร"
+            en: "A maintenance request web app for reporting facility issues, tracking job status, and monitoring repair performance through dashboards and reports.",
+            th: "เว็บแอปสำหรับแจ้งซ่อมสิ่งอำนวยความสะดวก ติดตามสถานะงาน และดูสรุปผลผ่านแดชบอร์ด/รายงาน"
         },
         features: {
-            en: ["Real-time room availability checking", "Online booking system with calendar", "Resource management dashboard", "Automated notifications", "Google Sheets integration"],
-            th: ["ตรวจสอบห้องว่างแบบเรียลไทม์", "ระบบจองออนไลน์พร้อมปฏิทิน", "แดชบอร์ดจัดการทรัพยากร", "การแจ้งเตือนอัตโนมัติ", "เชื่อมต่อกับ Google Sheets"]
+            en: [
+                "Online repair request form with photo upload and priority level (1–5)",
+                "Ticket ID generation and job tracking (Pending / In Progress / Waiting for Parts / Completed)",
+                "Admin management: assign technician, update status, add remarks, and close job with completion photo",
+                "Dashboard analytics with charts and time filters (day / month / year) + CSV export",
+                "Auto-notifications for new jobs / completion and waiting-parts reminders (optional)"
+            ],
+            th: [
+                "ฟอร์มแจ้งซ่อมออนไลน์ แนบรูป + เลือกระดับความเร่งด่วน (1–5)",
+                "สร้าง Ticket ID และติดตามสถานะงาน (รอดำเนินการ/กำลังดำเนินงาน/รออะไหล่/เสร็จสิ้น)",
+                "ระบบแอดมิน: มอบหมายช่าง อัปเดตสถานะ ใส่หมายเหตุ และปิดงานพร้อมรูปปิดงาน",
+                "แดชบอร์ดรายงานพร้อมกราฟ เลือกช่วงเวลา (รายวัน/รายเดือน/รายปี) และ Export CSV",
+                "แจ้งเตือนงานใหม่/งานเสร็จ และแจ้งเตือนกรณีรออะไหล่ตามกำหนด (ถ้าเปิดใช้)"
+            ]
         },
-        tech: ["HTML5", "CSS3", "JavaScript", "Google Sheets API"]
+        tech: [
+            "Google Apps Script (Web App)",
+            "HTMLService (HTML/CSS/JavaScript)",
+            "Google Sheets (Database)",
+            "Google Drive (Image Storage)",
+            "Bootstrap 5",
+            "SweetAlert2",
+            "Chart.js"
+        ]
     },
+
+    // =====================================
+    // 02) HR × IT Integration (New/Resign)
+    // =====================================
     project2: {
-        title: { en: "HR × IT Integration System", th: "ระบบเชื่อมโยง HR × IT" },
+        title: { en: "HR × IT Integration System", th: "ระบบแจ้งพนักงานใหม่/ลาออก (HR × IT)" },
         description: {
-            en: "Integrated system connecting HR with IT through LINE Official Account for streamlined communication.",
-            th: "ระบบบูรณาการที่เชื่อมโยง HR กับ IT ผ่าน LINE Official Account เพื่อการสื่อสารที่คล่องตัว"
+            en: "A workflow automation system connecting HR and IT using Google Forms, Google Sheets, and Apps Script—handling new hire and resignation notifications with status tracking.",
+            th: "ระบบอัตโนมัติที่เชื่อมงาน HR และ IT ด้วย Google Forms, Google Sheets และ Apps Script สำหรับแจ้งพนักงานใหม่/ลาออก พร้อมติดตามสถานะการดำเนินงาน"
         },
         features: {
-            en: ["LINE OA integration", "Automated request routing", "IT ticket system", "Real-time updates", "Database synchronization"],
-            th: ["เชื่อมต่อกับ LINE OA", "ระบบจัดส่งคำขออัตโนมัติ", "ระบบตั๋วงาน IT", "อัปเดตแบบเรียลไทม์", "ซิงค์ข้อมูลฐานข้อมูล"]
+            en: [
+                "New hire form submission triggers automated email notification to IT",
+                "Resignation form updates HR records (adds resign date) and marks the employee status",
+                "IT setup form updates account/access fields in the HR sheet (partial update supported)",
+                "Status tracking with clear color/state logic (e.g., Pending / Complete / Resigned)",
+                "Error handling and alerts when employee ID is not found"
+            ],
+            th: [
+                "เมื่อ HR ส่งฟอร์มพนักงานใหม่ ระบบส่งอีเมลแจ้ง IT อัตโนมัติ",
+                "ฟอร์มลาออกอัปเดตข้อมูลในชีต HR (เพิ่มวันที่ลาออก) และทำเครื่องหมายสถานะพนักงาน",
+                "ฟอร์ม IT Setup อัปเดตข้อมูลบัญชี/สิทธิ์ในชีต HR (รองรับกรอกบางช่องได้)",
+                "ติดตามสถานะด้วยตรรกะสถานะ/สีที่ชัดเจน (เช่น รอดำเนินการ/เสร็จสิ้น/ลาออกแล้ว)",
+                "มีการตรวจสอบและแจ้งเตือนกรณีไม่พบ Employee ID"
+            ]
         },
-        tech: ["JavaScript", "LINE API", "Node.js", "Webhook"]
+        tech: [
+            "Google Apps Script",
+            "Google Forms",
+            "Google Sheets",
+            "MailApp (Gmail Service)",
+            "SpreadsheetApp API"
+        ]
     },
+
+    // ==============================
+    // 03) IT Department Contact (LINE OA)
+    // ==============================
     project3: {
-        title: { en: "IT Department Contact Portal", th: "ช่องทางติดต่อฝ่าย IT" },
+        title: { en: "IT Department Contact Portal (LINE OA)", th: "ช่องทางติดต่อฝ่าย IT (LINE OA)" },
         description: {
-            en: "Centralized web portal for IT support requests and department coordination.",
-            th: "พอร์ทัลเว็บแบบรวมศูนย์สำหรับคำขอสนับสนุน IT และการประสานงานของแผนก"
+            en: "A centralized IT support channel via LINE Official Account, providing quick communication, automated replies, and structured support access for staff.",
+            th: "ช่องทางติดต่อฝ่าย IT แบบรวมศูนย์ผ่าน LINE Official Account เพื่อสื่อสารได้รวดเร็ว มีระบบตอบกลับอัตโนมัติ และช่วยให้การขอความช่วยเหลือเป็นระบบ"
         },
         features: {
-            en: ["Online ticket system", "Knowledge base & FAQs", "Request tracking", "Document repository", "Contact directory"],
-            th: ["ระบบตั๋วงานออนไลน์", "ฐานความรู้และคำถามที่พบบ่อย", "ติดตามสถานะคำขอ", "คลังเอกสาร", "รายชื่อติดต่อ"]
+            en: [
+                "Direct IT support contact via LINE Official Account",
+                "Auto-reply messages for FAQs and basic guidance",
+                "Rich Menu shortcuts (Submit Request / Check Status / Contact IT)",
+                "Broadcast announcements for system updates and maintenance",
+                "Link integration to online forms/sheets for structured requests"
+            ],
+            th: [
+                "ติดต่อฝ่าย IT ผ่าน LINE Official Account ได้โดยตรง",
+                "ตอบกลับอัตโนมัติสำหรับคำถามที่พบบ่อย/แนวทางเบื้องต้น",
+                "Rich Menu สำหรับทางลัด (ส่งคำขอ/เช็คสถานะ/ติดต่อ IT)",
+                "Broadcast แจ้งอัปเดตระบบและประกาศการบำรุงรักษา",
+                "เชื่อมลิงก์ไปยังฟอร์ม/ชีต เพื่อส่งคำขอแบบเป็นระบบ"
+            ]
         },
-        tech: ["HTML/CSS", "JavaScript", "PHP", "MySQL"]
+        tech: [
+            "LINE Official Account Manager",
+            "Rich Menu",
+            "Auto-Reply",
+            "Broadcast Messaging"
+            // ถ้ามี webhook/เชื่อมระบบจริง ค่อยเพิ่ม: "LINE Messaging API", "Webhook"
+        ]
     }
 };
 
