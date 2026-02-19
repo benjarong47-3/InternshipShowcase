@@ -32,7 +32,7 @@
         },
         "exploreBtn": {
             "en": "Explore Vision",
-            "th": "สำรวจวิสัยทัศน์"
+            "th": "วิสัยทัศน์"
         },
         "contactBtn": {
             "en": "Contact Us",
@@ -46,23 +46,15 @@
         },
         "title": {
             "en": "Welcome to Ambassador Bilingual Academy",
-            "th": "ยินดีต้อนรับสู่โรงเรียนยุวทูตศึกษาพัฒนาราชพฤกษ์"
+            "th": "ยินดีต้อนรับสู่โรงเรียนยุวฑูตศึกษาพัฒนาราชพฤกษ์"
         },
         "visionTitle": {
             "en": "Our Vision",
             "th": "วิสัยทัศน์"
         },
-        "vision1": {
-            "en": "We aspire to be a leading educational institution that instills a love for learning, fosters critical thinking, and cultivates global citizens who contribute positively to society.",
-            "th": "โรงเรียน Ambassador Bilingual Academy มุ่งมั่นที่จะเป็นสถาบันการศึกษาชั้นนำที่ปลูกฝังความรักในการเรียนรู้ ส่งเสริมการคิดอย่างมีวิจารณญาณ และพัฒนาผู้เรียนให้เป็นพลเมืองโลกที่มีคุณภาพ สามารถมีส่วนร่วมและสร้างประโยชน์แก่สังคมได้อย่างเหมาะสม"
-        },
-        "vision2": {
-            "en": "During 2024-2026, we aim to become a learning organization promoting participatory management and developing high-quality educators while ensuring educational excellence.",
-            "th": "ภายในปีการศึกษา 2567-2569 โรงเรียนยุวฑูตศึกษาพัฒนาราชพฤกษ์มุ่งสู่การเป็นองค์กรแห่งการเรียนรู้ บริหารจัดการโดยยึดหลักการมีส่วนร่วม มุ่งพัฒนาครูและบุคลากรให้มีคุณภาพ เพื่อยกระดับและประกันคุณภาพการศึกษา"
-        },
-        "vision3": {
-            "en": "We develop students to possess strong knowledge and effective communication skills in both Thai and English. Students will be equipped with essential life skills, morality, and ethics, enabling them to be good members of society.",
-            "th": "โรงเรียนมุ่งพัฒนาผู้เรียนให้มีความรู้ ความสามารถในการใช้ภาษาไทยและภาษาอังกฤษเพื่อการสื่อสารได้อย่างมีประสิทธิภาพ มีทักษะชีวิต เป็นผู้มีคุณธรรม จริยธรรม มีความสามารถในการคิด วิเคราะห์ และใช้เทคโนโลยีได้อย่างเหมาะสม มีสุขภาวะที่สมบูรณ์ และสามารถดำรงชีวิตอยู่ในสังคมได้อย่างมีความสุข"
+        "visionFull": {
+            "en": "By the academic years 2024–2026, Yuwathut Suksa\nPatana Rajapruek School will be a learning organization\nthat emphasizes participatory management and a\nresultsoriented approach. The school will develop and\nsupport quality teachers and staff to ensure educational\nexcellence, enabling students to acquire knowledge and\nproficiency in Thai and English communication, as well\nas essential life skills. Students will grow to be ethical\nand moral individuals, valuable members of society,\nequipped with critical thinking abilities, technological\ncompetence, good physical health, and the capacity to\nlive happy and fulfilling lives.",
+            "th": "ภายในปีการศึกษา 2567-2569 โรงเรียนยุวฑูตศึกษา\nพัฒนาราชพฤกษ์ เป็นองค์กรแห่งการเรียนรู้ มุ่งบริหาร\nแบบมีส่วนร่วม มุ่งผลครู บุคลากรคุณภาพ เพื่อพัฒนาและ\nประกันคุณภาพ พัฒนาให้ผู้เรียนมีความรู้ และ มีทักษะการใช้\nภาษาไทย ภาษาอังกฤษในการสื่อสารได้เป็นอย่างดี มีทักษะชีวิต\nเป็นผู้มีคุณธรรม จริยธรรม เป็นคนดีของสังคม มีความสามารถ\nในการคิด และใช้เทคโนโลยี มีพลานามัยที่สมบูรณ์ และสามารถ\nดำรงชีวิตได้อย่างมีความสุข"
         },
         "philosophyTitle": {
             "en": "Our Philosophy",
@@ -258,11 +250,11 @@
         },
         "schoolName": {
             "en": "Ambassador Bilingual Academy",
-            "th": "โรงเรียนยุวทูตศึกษาพัฒนาราชพฤกษ์"
+            "th": "โรงเรียนยุวฑูตศึกษาพัฒนาราชพฤกษ์"
         },
         "addressLine1": {
-            "en": "133, Behind Goodview Village",
-            "th": "เลขที่ 133 หลังหมู่บ้านกู๊ดวิว"
+            "en": "133, Behind The​ ​View​ Village ",
+            "th": "เลขที่ 133 หลังเดอะวิว"
         },
         "addressLine2": {
             "en": "Mae Hia Sub-district, Mueang Chiang Mai District",
@@ -277,8 +269,8 @@
             "th": "ลิงก์ด่วน"
         },
         "copyright": {
-            "en": "© 2024 Ambassador Bilingual Academy. All rights reserved.",
-            "th": "© 2567 โรงเรียนยุวทูตศึกษาพัฒนาราชพฤกษ์ สงวนลิขสิทธิ์"
+            "en": "© 2026 Ambassador Bilingual Academy. All rights reserved.",
+            "th": "© 2569 โรงเรียนยุวฑูตศึกษาพัฒนาราชพฤกษ์ สงวนลิขสิทธิ์"
         }
     }
 }
